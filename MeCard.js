@@ -11,6 +11,7 @@ import {
   Heading,
   Grommet,
   Image,
+  Markdown,
   Paragraph,
 } from 'grommet';
 
@@ -33,6 +34,8 @@ const meCardtheme = {
     },
   },
 };
+
+
 
 const MeCard = () => 
 {
@@ -65,10 +68,9 @@ const MeCard = () =>
             <Heading level="3" margin={{ vertical: 'medium' }}>
               Bridge
             </Heading>
-            <Paragraph margin={{ top: 'none' }}>
-              A structure carrying a road, path, railroad, or canal across a
-              river, ravine, road, railroad, or other obstacle.
-            </Paragraph>
+            <Box align="center" pad="large">
+      
+    </Box>
           </Box>
           <CardFooter>
             <Box direction="row" align="center" gap="small">
