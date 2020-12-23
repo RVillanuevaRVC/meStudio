@@ -22,7 +22,7 @@ import {
 
 import { FormDown, FormUp, Favorite, ShareOption,Notification } from 'grommet-icons';
 import { grommet } from 'grommet/themes';
-import MeCard from './MeCard' ;
+import MeCardCtrl from './MeCard' ;
 
 const gravatarLink =  '//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80';
 
@@ -100,13 +100,43 @@ function App()
                 </Nav>
       </Header>
 
-      <MeCard></MeCard>
+      <MeCardCtrl></MeCardCtrl>
 
 
       
     </Grommet>
    
   );
+}
+
+class MeStudioApp extends React.Component 
+{
+  constructor(props) 
+  {
+    super(props);
+    // Don't call this.setState() here!
+    //this.state = { counter: 0 };
+    //this.handleClick = this.handleClick.bind(this);
+  }
+
+  render() 
+  {
+    return 
+    
+      <Grommet theme={theme} full>
+        <Header background="light-4" pad="small">
+                  <Avatar src={gravatarLink} />
+                  <Nav direction="row">
+                      <Anchor label="Home" href="#" onClick={btClickFunc}/>
+                      <Anchor label="Profile" href="#" />
+                  </Nav>
+        </Header>
+
+        <MeCardCtrl></MeCardCtrl>
+      </Grommet>
+
+    ;
+  }
 }
 
 export default App;
