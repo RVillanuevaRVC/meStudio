@@ -67,7 +67,13 @@ const AppBar = (props) => (
     />
   );
 
-function App() {
+function btClickFunc()
+{
+  console.log('btClickFunc') ;
+}
+
+function App() 
+{
 
   const [open, setOpen] = React.useState(false);
   const [favorite, setFavorite] = React.useState(false);
@@ -89,7 +95,7 @@ function App() {
       <Header background="light-4" pad="small">
                 <Avatar src={gravatarLink} />
                 <Nav direction="row">
-                    <Anchor label="Home" href="#" />
+                    <Anchor label="Home" href="#" onClick={btClickFunc}/>
                     <Anchor label="Profile" href="#" />
                 </Nav>
       </Header>
