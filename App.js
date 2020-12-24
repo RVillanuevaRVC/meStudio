@@ -7,20 +7,12 @@ import {
   Anchor,
   Avatar,
   Box,
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  Collapsible, 
   Header, 
-  Heading, 
   Grommet,
-  Image,
-  Paragraph,
   Nav } from 'grommet';
 
 
-import { FormDown, FormUp, Favorite, ShareOption,Notification } from 'grommet-icons';
+//import { FormDown, FormUp, Favorite, ShareOption,Notification } from 'grommet-icons';
 import { grommet } from 'grommet/themes';
 import MeCardCtrl from './MeCard' ;
 
@@ -53,69 +45,38 @@ const theme =
 };
 
 
-const AppBar = (props) => (
-    <Box
-      tag='header'
-      direction='row'
-      align='center'
-      justify='between'
-      background='brand'
-      pad={{ left: 'medium', right: 'small', vertical: 'small' }}
-      elevation='medium'
-      style={{ zIndex: '1' }}
-      {...props}
-    />
-  );
+const items = [
+  { label: 'HTML', href: '#' },
+  { label: 'JS', href: '#' },
+  { label: 'CSS', href: '#' },
+  { label: 'REACT', href: '#' },
+];
 
-function btClickFunc()
-{
-  console.log('btClickFunc') ;
-  const axios = require('axios');
-  var config = {
-    headers: {'Access-Control-Allow-Origin': '*'}
-  };
 
-  //axios.get()
-  axios.get('http://170.106.106.34:8082/index.html',{ crossdomain: true })
-  .then(function (response) 
-  {
-    // handle success
-    console.log(response);
-  })
-  .catch(function (error)
-   {
-    // handle error
-    console.log(error);
-  }) ;
 
-}
 
+/*
 function App() 
 {
 
-  const [open, setOpen] = React.useState(false);
-  const [favorite, setFavorite] = React.useState(false);
 
-  const ExpandButton = ({ ...rest }) => {
-    const Icon = open ? FormUp : FormDown;
-    return (
-      <Button
-        hoverIndicator="light-4"
-        icon={<Icon color="brand" />}
-        {...rest}
-      />
-    );
-  };
 
   return (
     
     <Grommet theme={theme} full>
-      <Header background="light-4" pad="small">
+      <Header background="dark-2" pad="small">
+      <Box direction="row" align="center" gap="small">
                 <Avatar src={gravatarLink} />
-                <Nav direction="row">
-                    <Anchor label="Home" href="#" onClick={btClickFunc}/>
-                    <Anchor label="Profile" href="#" />
-                </Nav>
+                <Anchor color="white" href="https://github.com/ShimiSun">
+          ShimiSun
+        </Anchor>
+
+      </Box>
+      <Nav direction="row">
+        {items.map(item => (
+          <Anchor href={item.href} label={item.label} key={item.label} />
+        ))}
+      </Nav>
       </Header>
 
       <MeCardCtrl></MeCardCtrl>
@@ -126,6 +87,7 @@ function App()
    
   );
 }
+*/
 
 class MeStudioApp extends React.Component 
 {
@@ -139,22 +101,48 @@ class MeStudioApp extends React.Component
 
   render() 
   {
-    return 
-    
+    return (
       <Grommet theme={theme} full>
-        <Header background="light-4" pad="small">
-                  <Avatar src={gravatarLink} />
-                  <Nav direction="row">
-                      <Anchor label="Home" href="#" onClick={btClickFunc}/>
-                      <Anchor label="Profile" href="#" />
-                  </Nav>
+        <Header background="dark-2" pad="small">
+          <Box direction="row" align="center" gap="small">
+            <Avatar src={gravatarLink} />
+            <Anchor color="white" href="https://github.com/ShimiSun">ShimiSun</Anchor>
+          </Box>
+          
+          <Nav direction="row">
+            {items.map(item => (
+              <Anchor href={item.href} label={item.label} key={item.label} />
+            ))}
+          </Nav>
         </Header>
 
         <MeCardCtrl></MeCardCtrl>
+    
       </Grommet>
+    );
 
-    ;
+  }
+
+  btClickFunc()
+  {
+    console.log('btClickFunc') ;
+    const axios = require('axios');
+    //var config = {headers: {'Access-Control-Allow-Origin': '*'}};
+  
+    //axios.get()
+    axios.get('http://170.106.106.34:8082/index.html',{ crossdomain: true })
+    .then(function (response) 
+    {
+      // handle success
+      console.log(response);
+    })
+    .catch(function (error)
+     {
+      // handle error
+      console.log(error);
+    }) ;
+  
   }
 }
 
-export default App;
+export default MeStudioApp;
