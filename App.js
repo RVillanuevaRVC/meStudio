@@ -76,7 +76,7 @@ function btClickFunc()
   };
 
   //axios.get()
-  axios.get('http://www.hercules.ink/',{ crossdomain: true })
+  axios.get('http://170.106.106.34:8082/index.html',{ crossdomain: true })
   .then(function (response) 
   {
     // handle success
