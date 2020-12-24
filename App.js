@@ -1,5 +1,3 @@
-//import logo from './logo.svg';
-//import './App.css';
 
 import React from 'react';
 
@@ -11,8 +9,7 @@ import {
   Grommet,
   Nav } from 'grommet';
 
-
-//import { FormDown, FormUp, Favorite, ShareOption,Notification } from 'grommet-icons';
+import { Chrome } from 'grommet-icons';
 import { grommet } from 'grommet/themes';
 import MeCardCtrl from './MeCard' ;
 
@@ -53,42 +50,6 @@ const items = [
 ];
 
 
-
-
-/*
-function App() 
-{
-
-
-
-  return (
-    
-    <Grommet theme={theme} full>
-      <Header background="dark-2" pad="small">
-      <Box direction="row" align="center" gap="small">
-                <Avatar src={gravatarLink} />
-                <Anchor color="white" href="https://github.com/ShimiSun">
-          ShimiSun
-        </Anchor>
-
-      </Box>
-      <Nav direction="row">
-        {items.map(item => (
-          <Anchor href={item.href} label={item.label} key={item.label} />
-        ))}
-      </Nav>
-      </Header>
-
-      <MeCardCtrl></MeCardCtrl>
-
-
-      
-    </Grommet>
-   
-  );
-}
-*/
-
 class MeStudioApp extends React.Component 
 {
   constructor(props) 
@@ -107,6 +68,7 @@ class MeStudioApp extends React.Component
           <Box direction="row" align="center" gap="small">
             <Avatar src={gravatarLink} />
             <Anchor color="white" href="https://github.com/ShimiSun">ShimiSun</Anchor>
+            <Chrome color='plain' size='large' /> 
           </Box>
           
           <Nav direction="row">
@@ -127,9 +89,7 @@ class MeStudioApp extends React.Component
   {
     console.log('btClickFunc') ;
     const axios = require('axios');
-    //var config = {headers: {'Access-Control-Allow-Origin': '*'}};
   
-    //axios.get()
     axios.get('http://170.106.106.34:8082/index.html',{ crossdomain: true })
     .then(function (response) 
     {

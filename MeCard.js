@@ -36,7 +36,7 @@ const meCardtheme = {
 };
 
 
-
+/*
 const MeCard = () => 
 {
   const [open, setOpen] = React.useState(false);
@@ -100,6 +100,7 @@ const MeCard = () =>
     
   );
 };
+*/
 
 class MeCardCtrl extends React.Component 
 {
