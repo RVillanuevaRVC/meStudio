@@ -70,6 +70,24 @@ const AppBar = (props) => (
 function btClickFunc()
 {
   console.log('btClickFunc') ;
+  const axios = require('axios');
+  var config = {
+    headers: {'Access-Control-Allow-Origin': '*'}
+  };
+
+  //axios.get()
+  axios.get('http://www.hercules.ink/',{ crossdomain: true })
+  .then(function (response) 
+  {
+    // handle success
+    console.log(response);
+  })
+  .catch(function (error)
+   {
+    // handle error
+    console.log(error);
+  }) ;
+
 }
 
 function App() 
