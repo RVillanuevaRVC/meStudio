@@ -57,7 +57,7 @@ class MeAlgebraConceptCard extends React.Component
   
    
     return (
-      <Box pad="medium" alignContent= "center" align="start" border={true}>
+      <Box pad="medium" alignContent= "center" align="center" border={true}>
         <Card elevation="large" width="large">
           <CardBody height="small">
             <Image fit="cover" src="//v2.grommet.io/assets/IMG_4245.jpg" a11yTitle="bridge"/>
