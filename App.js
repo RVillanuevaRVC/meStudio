@@ -12,6 +12,7 @@ import {
 import { Chrome } from 'grommet-icons';
 import { grommet } from 'grommet/themes';
 import MePlainCard from './MeCard' ;
+import MeQuizCard from './MeQuizCard' ;
 
 const gravatarLink =  '//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80';
 
@@ -78,7 +79,7 @@ class MeStudioApp extends React.Component
           </Nav>
         </Header>
 
-        <MePlainCard ></MePlainCard>
+        <MeQuizCard ></MeQuizCard>
     
       </Grommet>
     );
