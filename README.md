@@ -6,8 +6,8 @@ Function block:
 
 
 ### Subject Review
-  -As to each subject, review the notes in markdown format
-  -
+  -- As to each subject, review the notes in markdown format
+  -- notes are displayed in indexing cards form, include topic, keywords, highlight key info... in markdown format
   
 #### Geography Review
 #### Biology Review
