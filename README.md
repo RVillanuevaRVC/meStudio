@@ -1,3 +1,3 @@
 # meStudio
 
--https://github.com/hugobarragon/react-quizzes
+-https://github.com/wingkwong/react-quiz-component
