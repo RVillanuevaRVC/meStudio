@@ -8,12 +8,13 @@ import {
     CardBody,
     CardFooter,
     CardHeader,
-    
+    CheckBox,
     Heading,
     Grommet,
     Image,
     Markdown,
     Paragraph,
+    RadioButton,
     RadioButtonGroup ,
   } from 'grommet';
   import { FormDown, FormUp, Favorite, ShareOption } from 'grommet-icons';
@@ -25,9 +26,7 @@ class MeQuizCard extends React.Component
     super(props);
     
     this.state = {
-      open : false,
-      favorite : false,
-      value : 0 
+
     } ;
     
     // Don't call this.setState() here!
@@ -39,38 +38,27 @@ class MeQuizCard extends React.Component
 
   render()
   {
-    const postMethods = [
-        { label: 'FTP', value: 'FTP' },
-        {
-          label: 'File System',
-          value: 'FileSystem',
-        },
-        {
-          label: 'FTP & File System',
-          value: 'FTPCopy',
-        },
-      ];
+
     return (
         <Box pad="medium" alignContent= "center" align="center" border={false}>
             <Card elevation="large" width="large">
                 <CardHeader pad="medium">Quiz</CardHeader>
-                <CardBody height="small">
+                
+                <CardBody >
                     <Box pad={{ horizontal: 'medium' }} responsive={false}>
-                        <Heading level="3" margin={{ vertical: 'medium' }}> Bridge </Heading>
-                        <Box align="center" pad="large">
-                        </Box>
+                      <Markdown>## Question Go here **heart**s markdown Favorite thing, [link](https://twitter.com/grommet_io)</Markdown>
                     </Box>
-                    <Box>
-                        <RadioButtonGroup pad="medium" border='all' name="radio"
-                            options={postMethods}
-                            value={this.state.value}
-                            onChange={event => this.setState(event.target.value)}>
-                        </RadioButtonGroup>
-                    </Box>
+
+                    <RadioButtonGroup pad={{ horizontal: 'medium' }}
+                      name="doc"
+                      options={['This is place for Answer Option No1.A fox quickly run over the grassdsjskdhsjkdhfsjkdhsjkdhsjkdhsjkdhjskadhjskahdjksahdjksahdkjasXABC', 
+                          'This is place for Answer Option No2.',
+                          'This is place for Answer Option No3.',
+                          'This is place for Answer Option No4.']}
+                    value={1}
+                    />
                 </CardBody>
-                
-                
-                
+
                 <CardFooter>
                     <Box direction="row" align="center" gap="small">
                         <Button icon={<Favorite color={'red' } />} hoverIndicator />
