@@ -22,7 +22,7 @@ class MeReminderPad extends React.Component
   render()
   {
     return (
-      <Box >
+      <Box pad="medium" width = 'xxlarge' alignContent= "center" align="center" border={'all'}>
       <Accordion >
         <AccordionPanel label="Panel 1">
           <Box background="light-2" overflow="auto" height="medium">

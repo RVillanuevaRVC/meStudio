@@ -14,6 +14,8 @@ import { grommet } from 'grommet/themes';
 import MePlainCard from './MeCard' ;
 import MeQuizCard from './MeQuizCard' ;
 import MeReminderPad from './MeReminderPad' ;
+import MeAlgebraConceptCard from './MeAlgebraConceptCard' ;
+import MeMarkdownSlide from './MeMarkdownSlide' ;
 
 const gravatarLink =  '//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80';
 
@@ -45,10 +47,10 @@ const theme =
 
 
 const items = [
-  { label: 'HTML', href: '#' },
-  { label: 'JS', href: '#' },
-  { label: 'CSS', href: '#' },
-  { label: 'REACT', href: '#' },
+  { label: 'Geography', href: '#' },
+  { label: 'Algebra  ', href: '#' },
+  { label: 'Biology  ', href: '#' },
+  { label: 'Englih   ', href: '#' },
 ];
 
 
@@ -69,7 +71,7 @@ class MeStudioApp extends React.Component
         <Header background="dark-2" pad="small">
           <Box direction="row" align="center" gap="small">
             <Avatar src={gravatarLink} />
-            <Anchor color="white" href="https://github.com/ShimiSun">ShimiSun</Anchor>
+            <Anchor color="white" href="https://github.com/ShimiSun">Todos</Anchor>
             <Chrome color='plain' size='large' /> 
           </Box>
           
@@ -80,7 +82,7 @@ class MeStudioApp extends React.Component
           </Nav>
         </Header>
 
-        <MeReminderPad ></MeReminderPad>
+        <MeMarkdownSlide ></MeMarkdownSlide>
     
       </Grommet>
     );

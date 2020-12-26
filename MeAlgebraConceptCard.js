@@ -16,6 +16,8 @@ import {
 } from 'grommet';
 
 import { FormDown, FormUp, Favorite, ShareOption } from 'grommet-icons';
+import 'katex/dist/katex.min.css';
+import TeX from '@matejmazur/react-katex';
 
 const meCardtheme = {
   global: {
@@ -59,14 +61,16 @@ class MeAlgebraConceptCard extends React.Component
     return (
       <Box pad="medium" alignContent= "center" align="center" border={true}>
         <Card elevation="large" width="large">
-          <CardBody height="small">
-            <Image fit="cover" src="//v2.grommet.io/assets/IMG_4245.jpg" a11yTitle="bridge"/>
+          <CardBody height="small" pad={{ horizontal: 'medium' }}>
+            <div>Algebra Formula Cards</div>
           </CardBody>
           
           <Box pad={{ horizontal: 'medium' }} responsive={false}>
             <Heading level="3" margin={{ vertical: 'medium' }}> Bridge </Heading>
             <Box align="center" pad="large">
             </Box>
+            <TeX> \int_0^\infty x^2 dx</TeX>
+            <TeX> f(x)=y^2+3</TeX>
           </Box>
           
           <CardFooter>
@@ -75,15 +79,10 @@ class MeAlgebraConceptCard extends React.Component
               <Button icon={<ShareOption color="plain" />} hoverIndicator />
               <Anchor href="https://www.collinsdictionary.com/us/dictionary/english/bridge" label="Learn More"/>
             </Box>
-            <ExpandButton  onClick={() => this.setState({open:!this.state.open})}/>
+            
           </CardFooter>
           
-          <Collapsible open = {this.state.open}>
-            <Paragraph margin="medium" color="dark-3">
-              The greatest bridge builders of antiquity were the ancient Romans.The Romans built arch bridges and aqueducts that could stand in conditions that would damage or destroy earlier designs. Some
-              stand today.
-            </Paragraph>
-          </Collapsible>
+          
         </Card>
       </Box>
     );
